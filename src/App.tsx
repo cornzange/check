@@ -1,16 +1,17 @@
 import './App.css'
 import { TonConnectUIProvider } from '@tonconnect/ui-react'
 import Header from './components/header'
+import Content from './components/content'
+import Footer from './components/footer'
 
 function App() {
 
   return (
-    <TonConnectUIProvider manifestUrl="https://firebasestorage.googleapis.com/v0/b/pure-colors.appspot.com/o/ton-manifest.json?alt=media&token=fe5a096b-1ab8-4d6f-9c50-63370bf9f6be">
+    <TonConnectUIProvider manifestUrl="https://firebasestorage.googleapis.com/v0/b/check-e1763.appspot.com/o/ton-manifest.json?alt=media&token=2f2e7cfd-99f6-4ca6-9787-5feb5fc47e0a">
       <div className="App">
         <Header></Header>
-        {/* <Header color={color} ></Header>
-        <Content color={color} setColor={setColor}></Content>
-        <Footer color={color}></Footer> */}
+        <Content ></Content>
+        <Footer ></Footer>
       </div>
     </TonConnectUIProvider>
   )
