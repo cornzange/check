@@ -1,4 +1,4 @@
-import { Address, Cell, beginCell, toNano } from "@ton/core";
+import { Address, Cell, beginCell } from "@ton/core";
 import { SendTransactionRequest, useTonConnectUI } from "@tonconnect/ui-react";
 import { useState } from "react";
 import { CHECK_BASE_64 } from "../constatnts";
@@ -12,7 +12,7 @@ function Receiver() {
     const [jettonMinterAddress, setJettonMinterAddress] = useState('');
     const [password, setPassword] = useState('');
     const [checkAddress, setCheckAddress] = useState('');
-    const createPayload = (password: Cell, jettonWalletAddress: Address, jettonsAmount: bigint, ownerAddress: Address) => {
+    const createPayload = (password: Cell, jettonWalletAddress: Address, jettonsAmount: number, ownerAddress: Address) => {
         const opCode = 1;
         const queryId = 1;
         const payload: Cell = beginCell()
@@ -33,7 +33,7 @@ function Receiver() {
         const minterAddress: Address = toAddress(jettonMinterAddress)
         const check: Address = toAddress(checkAddress)
         const destination: Address = toAddress(destinationAddress)
-        const jettonsToTransfer = toNano(jettonsAmount)
+        const jettonsToTransfer = parseInt(jettonsAmount)
         const walletAddress: Address = await getJettonWalletAddress(minterAddress, check)
         const code: Cell = Cell.fromBase64(CHECK_BASE_64)
         const data: Cell = beginCell()
