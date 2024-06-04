@@ -2,7 +2,7 @@ import { Address, Cell, beginCell } from "@ton/core";
 import { SendTransactionRequest, useTonConnectUI } from "@tonconnect/ui-react";
 
 function Second({ jettonMinterAddress, checkAddress }: { jettonMinterAddress: string, checkAddress: string }) {
-    const [tonConnectUI, setOptions] = useTonConnectUI();
+    const [tonConnectUI] = useTonConnectUI();
     const createPayload = (checkAddress: Address, jettonMinterAddress: Address, jettonsAmountToMint: number) => {
         const masgerMsg: Cell = beginCell()
             .storeUint(0x178d4519, 32) // op

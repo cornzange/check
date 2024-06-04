@@ -1,8 +1,7 @@
-import { Address, Cell, beginCell, contractAddress, storeStateInit } from "@ton/core";
+import { Address, beginCell } from "@ton/core";
 import { useState } from "react";
 import { CHECK_BASE_64 } from "../constatnts";
 import { getCheckAddress } from "../api";
-import { Buffer } from "buffer";
 import { getPasswordHash } from "../utils";
 
 export type CheckConfig = {

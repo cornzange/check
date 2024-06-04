@@ -1,6 +1,5 @@
 import { useState } from "react"
 import Sender from "./steps/first";
-import Second from "./steps/second";
 import Receiver from "./steps/third";
 
 function Content() {

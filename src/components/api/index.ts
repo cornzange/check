@@ -1,6 +1,6 @@
 import { HttpClient, Api } from 'tonapi-sdk-js';
 import { CHECK_CONTRACT_ADDRESS, TON_API_TOKEN } from '../constatnts';
-import { Address, Cell, beginCell } from '@ton/core';
+import { Address, Cell } from '@ton/core';
 import { Buffer } from 'buffer';
 
 const httpClient = new HttpClient({

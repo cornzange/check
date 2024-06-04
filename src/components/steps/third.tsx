@@ -1,22 +1,12 @@
-import { Address, Cell, beginCell, storeStateInit, toNano } from "@ton/core";
+import { Address, Cell, beginCell, toNano } from "@ton/core";
 import { SendTransactionRequest, useTonConnectUI } from "@tonconnect/ui-react";
 import { useState } from "react";
 import { CHECK_BASE_64 } from "../constatnts";
 import { createStateInit, getPasswordHash, passwordToCell } from "../utils";
 import { getJettonWalletAddress } from "../api";
 
-type Props = {
-    jettonWalletAddress: string
-    setJettonWalletAddress: (newValue: string) => void
-    jettonsAmount: string
-    setJettonsAmount: (newValue: string) => void
-    destinationAddress: string
-    setDestinationAddress: (newValue: string) => void
-}
 function Receiver() {
-    const [tonConnectUI, setOptions] = useTonConnectUI();
-
-    const [jettonWalletAddress, setJettonWalletAddress] = useState('');
+    const [tonConnectUI] = useTonConnectUI();
     const [jettonsAmount, setJettonsAmount] = useState('');
     const [destinationAddress, setDestinationAddress] = useState('');
     const [jettonMinterAddress, setJettonMinterAddress] = useState('');
