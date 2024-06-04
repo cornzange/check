@@ -17,6 +17,7 @@
     "buffer": "^6.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup-plugin-polyfill-node": "^0.13.0",
     "tonapi-sdk-js": "^1.0.10"
   },
   "devDependencies": {
