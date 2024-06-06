@@ -23,7 +23,7 @@ function Receiver() {
             .storeCoins(jettonsAmount)
             .storeAddress(ownerAddress)
             .storeAddress(ownerAddress)
-            .storeCoins(0)
+            .storeCoins(1)
             .endCell()
         return payload.toBoc().toString('base64')
     }
